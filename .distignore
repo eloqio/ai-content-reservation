@@ -1,0 +1,24 @@
+# Files and folders excluded from the WordPress.org distribution zip.
+# Used by 10up/action-wordpress-plugin-deploy.
+
+.git
+.github
+.gitignore
+.distignore
+.wordpress-org
+.DS_Store
+.idea
+.vscode
+node_modules
+vendor
+tests
+phpunit.xml
+phpunit.xml.dist
+phpcs.xml
+phpcs.xml.dist
+.phpunit.result.cache
+README.md
+composer.json
+composer.lock
+package.json
+package-lock.json
