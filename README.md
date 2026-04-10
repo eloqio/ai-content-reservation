@@ -1,4 +1,4 @@
-# AI Content Reservation (TDMRep)
+# ELOQIO AI Content Reservation
 
 Plugin WordPress qui implémente le [TDM Reservation Protocol](https://www.w3.org/community/reports/tdmrep/CG-FINAL-tdmrep-20240510/) du W3C pour signaler l'opt-out à l'entraînement IA sur un site WordPress.
 
@@ -20,8 +20,8 @@ TDMRep est le pendant technique de l'article 4 de la directive européenne DSM e
 ## Installation développeur
 
 ```bash
-git clone https://github.com/eloqio/ai-content-reservation.git
-cd ai-content-reservation
+git clone https://github.com/eloqio/eloqio-ai-content-reservation.git
+cd eloqio-ai-content-reservation
 # Symlink dans un wp-content/plugins local, ou wp-env
 ```
 
@@ -46,7 +46,7 @@ Namespace racine : `ELOQIO\AiContentReservation\` — autoloader PSR-4 maison, p
 - Namespaces PHP plutôt que préfixes de classes (recommandation WP.org 2025)
 - `defined('ABSPATH') || exit;` en tête de chaque fichier
 - Sanitization/escaping rigoureux : `wp_unslash`, `sanitize_*`, `esc_*`
-- Textdomain `ai-content-reservation`, chargement just-in-time (pas de `load_plugin_textdomain`)
+- Textdomain `eloqio-ai-content-reservation`, chargement just-in-time (pas de `load_plugin_textdomain`)
 
 ## Release workflow
 

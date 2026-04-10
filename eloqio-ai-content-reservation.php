@@ -1,7 +1,7 @@
 <?php
 /**
- * Plugin Name:       AI Content Reservation (TDMRep)
- * Plugin URI:        https://github.com/eloqio/ai-content-reservation
+ * Plugin Name:       ELOQIO AI Content Reservation
+ * Plugin URI:        https://github.com/eloqio/eloqio-ai-content-reservation
  * Description:       Implements the W3C TDM Reservation Protocol to signal AI training opt-out on your WordPress content. Exposes /.well-known/tdmrep.json, a tdm-reservation HTTP header, and a matching HTML meta tag.
  * Version:           1.0.0
  * Requires at least: 6.5
@@ -10,7 +10,7 @@
  * Author URI:        https://eloq.io
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain:       ai-content-reservation
+ * Text Domain:       eloqio-ai-content-reservation
  * Domain Path:       /languages
  */
 

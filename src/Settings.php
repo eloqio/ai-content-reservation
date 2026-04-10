@@ -6,7 +6,7 @@ defined( 'ABSPATH' ) || exit;
 
 final class Settings {
 
-	private const PAGE_SLUG    = 'ai-content-reservation';
+	private const PAGE_SLUG    = 'eloqio-ai-content-reservation';
 	private const OPTION_GROUP = 'eloqio_acr';
 	private const SECTION_MAIN = 'eloqio_acr_main';
 
@@ -27,8 +27,8 @@ final class Settings {
 
 	public function register_page(): void {
 		add_options_page(
-			esc_html__( 'AI Content Reservation', 'ai-content-reservation' ),
-			esc_html__( 'AI Content Reservation', 'ai-content-reservation' ),
+			esc_html__( 'AI Content Reservation', 'eloqio-ai-content-reservation' ),
+			esc_html__( 'AI Content Reservation', 'eloqio-ai-content-reservation' ),
 			'manage_options',
 			self::PAGE_SLUG,
 			[ $this, 'render_page' ]
@@ -48,14 +48,14 @@ final class Settings {
 
 		add_settings_section(
 			self::SECTION_MAIN,
-			esc_html__( 'Reservation settings', 'ai-content-reservation' ),
+			esc_html__( 'Reservation settings', 'eloqio-ai-content-reservation' ),
 			[ $this, 'render_section_intro' ],
 			self::PAGE_SLUG
 		);
 
 		add_settings_field(
 			'enabled',
-			esc_html__( 'Enable protocol', 'ai-content-reservation' ),
+			esc_html__( 'Enable protocol', 'eloqio-ai-content-reservation' ),
 			[ $this, 'render_field_enabled' ],
 			self::PAGE_SLUG,
 			self::SECTION_MAIN
@@ -63,7 +63,7 @@ final class Settings {
 
 		add_settings_field(
 			'tdm_reservation',
-			esc_html__( 'Reservation value', 'ai-content-reservation' ),
+			esc_html__( 'Reservation value', 'eloqio-ai-content-reservation' ),
 			[ $this, 'render_field_reservation' ],
 			self::PAGE_SLUG,
 			self::SECTION_MAIN
@@ -71,7 +71,7 @@ final class Settings {
 
 		add_settings_field(
 			'tdm_policy',
-			esc_html__( 'Policy URL (optional)', 'ai-content-reservation' ),
+			esc_html__( 'Policy URL (optional)', 'eloqio-ai-content-reservation' ),
 			[ $this, 'render_field_policy' ],
 			self::PAGE_SLUG,
 			self::SECTION_MAIN
@@ -95,7 +95,7 @@ final class Settings {
 	public function render_section_intro(): void {
 		echo '<p>' . esc_html__(
 			'Configure how this site signals its Text & Data Mining reservation to AI crawlers, per the W3C TDM Reservation Protocol.',
-			'ai-content-reservation'
+			'eloqio-ai-content-reservation'
 		) . '</p>';
 	}
 
@@ -105,15 +105,15 @@ final class Settings {
 			'<label><input type="checkbox" name="%1$s[enabled]" value="1" %2$s /> %3$s</label>',
 			esc_attr( Plugin::OPTION_KEY ),
 			checked( $settings['enabled'], true, false ),
-			esc_html__( 'Serve the endpoint, header and meta tag', 'ai-content-reservation' )
+			esc_html__( 'Serve the endpoint, header and meta tag', 'eloqio-ai-content-reservation' )
 		);
 	}
 
 	public function render_field_reservation(): void {
 		$settings = $this->plugin->settings();
 		$options  = [
-			1 => __( '1 — Rights reserved (opt-out)', 'ai-content-reservation' ),
-			0 => __( '0 — Rights not reserved (opt-in)', 'ai-content-reservation' ),
+			1 => __( '1 — Rights reserved (opt-out)', 'eloqio-ai-content-reservation' ),
+			0 => __( '0 — Rights not reserved (opt-in)', 'eloqio-ai-content-reservation' ),
 		];
 
 		echo '<select name="' . esc_attr( Plugin::OPTION_KEY ) . '[tdm_reservation]">';
@@ -137,7 +137,7 @@ final class Settings {
 		);
 		echo '<p class="description">' . esc_html__(
 			'Optional URL of a human-readable policy document describing your reservation terms.',
-			'ai-content-reservation'
+			'eloqio-ai-content-reservation'
 		) . '</p>';
 	}
 
@@ -149,7 +149,7 @@ final class Settings {
 		$endpoint_url = home_url( Endpoint::PATH );
 		?>
 		<div class="wrap">
-			<h1><?php esc_html_e( 'AI Content Reservation (TDMRep)', 'ai-content-reservation' ); ?></h1>
+			<h1><?php esc_html_e( 'AI Content Reservation (TDMRep)', 'eloqio-ai-content-reservation' ); ?></h1>
 
 			<form method="post" action="options.php">
 				<?php
@@ -159,14 +159,14 @@ final class Settings {
 				?>
 			</form>
 
-			<h2><?php esc_html_e( 'Endpoint', 'ai-content-reservation' ); ?></h2>
+			<h2><?php esc_html_e( 'Endpoint', 'eloqio-ai-content-reservation' ); ?></h2>
 			<p>
-				<?php esc_html_e( 'Your TDMRep endpoint is served at:', 'ai-content-reservation' ); ?>
+				<?php esc_html_e( 'Your TDMRep endpoint is served at:', 'eloqio-ai-content-reservation' ); ?>
 				<br />
 				<code><a href="<?php echo esc_url( $endpoint_url ); ?>" target="_blank" rel="noopener"><?php echo esc_html( $endpoint_url ); ?></a></code>
 			</p>
 			<p class="description">
-				<?php esc_html_e( 'Open the URL above in a new tab to verify that it returns valid JSON. The Site Health screen also runs an automated check.', 'ai-content-reservation' ); ?>
+				<?php esc_html_e( 'Open the URL above in a new tab to verify that it returns valid JSON. The Site Health screen also runs an automated check.', 'eloqio-ai-content-reservation' ); ?>
 			</p>
 		</div>
 		<?php
@@ -180,7 +180,7 @@ final class Settings {
 		$settings_link = sprintf(
 			'<a href="%s">%s</a>',
 			esc_url( admin_url( 'options-general.php?page=' . self::PAGE_SLUG ) ),
-			esc_html__( 'Settings', 'ai-content-reservation' )
+			esc_html__( 'Settings', 'eloqio-ai-content-reservation' )
 		);
 		array_unshift( $links, $settings_link );
 

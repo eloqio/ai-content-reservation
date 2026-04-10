@@ -1,5 +1,5 @@
-=== AI Content Reservation (TDMRep) ===
-Contributors: eloqio, haroldparis
+=== ELOQIO AI Content Reservation ===
+Contributors: eloqio
 Tags: ai, privacy, tdm, copyright, seo
 Requires at least: 6.5
 Tested up to: 6.9
@@ -12,7 +12,7 @@ Signal your AI training opt-out through the W3C TDM Reservation Protocol. One cl
 
 == Description ==
 
-**AI Content Reservation** implements the [W3C TDM Reservation Protocol (TDMRep)](https://www.w3.org/community/reports/tdmrep/CG-FINAL-tdmrep-20240510/) on your WordPress site. TDMRep is the technical counterpart of the European DSM Directive (Article 4) and the AI Act: it lets publishers legally reserve their rights regarding the use of their content for Text and Data Mining, including generative AI training.
+**ELOQIO AI Content Reservation** implements the [W3C TDM Reservation Protocol (TDMRep)](https://www.w3.org/community/reports/tdmrep/CG-FINAL-tdmrep-20240510/) on your WordPress site. TDMRep is the technical counterpart of the European DSM Directive (Article 4) and the AI Act: it lets publishers legally reserve their rights regarding the use of their content for Text and Data Mining, including generative AI training.
 
 Unlike `robots.txt`, which is a voluntary convention, TDMRep has **legal weight**. AI providers that ignore a properly deployed TDMRep signal expose themselves to substantial fines under the EU AI Act starting August 2026.
 
@@ -39,9 +39,9 @@ News publishers, bloggers, authors, creative agencies, and any content creator w
 
 == Installation ==
 
-1. Upload the plugin files to the `/wp-content/plugins/ai-content-reservation` directory, or install the plugin through the WordPress plugins screen directly.
+1. Upload the plugin files to the `/wp-content/plugins/eloqio-ai-content-reservation` directory, or install the plugin through the WordPress plugins screen directly.
 2. Activate the plugin through the 'Plugins' screen in WordPress.
-3. Go to **Settings → AI Content Reservation** to verify or adjust the reservation value.
+3. Go to **Settings → ELOQIO AI Content Reservation** to verify or adjust the reservation value.
 4. Visit `https://your-site.com/.well-known/tdmrep.json` to confirm the endpoint is live.
 5. (Optional) Archive the endpoint URL on the Wayback Machine for evidence.
 
@@ -69,7 +69,7 @@ The current version applies to the entire site (`location: /`). Per-post granula
 
 == Screenshots ==
 
-1. Settings screen under Settings → AI Content Reservation.
+1. Settings screen under Settings → ELOQIO AI Content Reservation.
 2. The JSON endpoint served at /.well-known/tdmrep.json.
 3. Site Health check confirming the endpoint is reachable.
 

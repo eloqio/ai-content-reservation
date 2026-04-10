@@ -18,7 +18,7 @@ jobs:
         env:
           SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
           SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
-          SLUG: ai-content-reservation
+          SLUG: eloqio-ai-content-reservation
 
   assets:
     name: Push WordPress.org assets
@@ -32,4 +32,4 @@ jobs:
         env:
           SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
           SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
-          SLUG: ai-content-reservation
+          SLUG: eloqio-ai-content-reservation

@@ -2,125 +2,97 @@
 # This file is distributed under the GPL-2.0-or-later.
 msgid ""
 msgstr ""
-"Project-Id-Version: AI Content Reservation (TDMRep) 1.0.0\n"
-"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/ai-content-reservation\n"
+"Project-Id-Version: ELOQIO AI Content Reservation 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/eloqio-ai-content-reservation\n"
 "Last-Translator: Harold Paris <harold@eloq.io>\n"
 "Language-Team: Français <fr@li.org>\n"
 "Language: fr_FR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-04-10T16:48:03+00:00\n"
-"PO-Revision-Date: 2026-04-10 17:00+0000\n"
+"POT-Creation-Date: 2026-04-10T18:00:00+00:00\n"
+"PO-Revision-Date: 2026-04-10 20:00+0000\n"
 "X-Generator: manual\n"
-"X-Domain: ai-content-reservation\n"
+"X-Domain: eloqio-ai-content-reservation\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #. Plugin Name of the plugin
-#: ai-content-reservation.php
-#: src/Settings.php:152
-msgid "AI Content Reservation (TDMRep)"
-msgstr "AI Content Reservation (TDMRep)"
+msgid "ELOQIO AI Content Reservation"
+msgstr "ELOQIO AI Content Reservation"
 
 #. Plugin URI of the plugin
-#: ai-content-reservation.php
-msgid "https://github.com/eloqio/ai-content-reservation"
-msgstr "https://github.com/eloqio/ai-content-reservation"
+msgid "https://github.com/eloqio/eloqio-ai-content-reservation"
+msgstr "https://github.com/eloqio/eloqio-ai-content-reservation"
 
 #. Description of the plugin
-#: ai-content-reservation.php
 msgid "Implements the W3C TDM Reservation Protocol to signal AI training opt-out on your WordPress content. Exposes /.well-known/tdmrep.json, a tdm-reservation HTTP header, and a matching HTML meta tag."
 msgstr "Implémente le W3C TDM Reservation Protocol pour signaler le refus d'entraînement IA sur votre contenu WordPress. Expose /.well-known/tdmrep.json, un en-tête HTTP tdm-reservation et une balise meta HTML correspondante."
 
 #. Author of the plugin
-#: ai-content-reservation.php
 msgid "ELOQIO"
 msgstr "ELOQIO"
 
 #. Author URI of the plugin
-#: ai-content-reservation.php
 msgid "https://eloq.io"
 msgstr "https://eloq.io"
 
-#: src/Settings.php:30
-#: src/Settings.php:31
-#: src/SiteHealth.php:64
 msgid "AI Content Reservation"
 msgstr "Réservation de contenu IA"
 
-#: src/Settings.php:51
 msgid "Reservation settings"
 msgstr "Paramètres de réservation"
 
-#: src/Settings.php:58
 msgid "Enable protocol"
 msgstr "Activer le protocole"
 
-#: src/Settings.php:66
 msgid "Reservation value"
 msgstr "Valeur de réservation"
 
-#: src/Settings.php:74
 msgid "Policy URL (optional)"
 msgstr "URL de la politique (optionnel)"
 
-#: src/Settings.php:96
 msgid "Configure how this site signals its Text & Data Mining reservation to AI crawlers, per the W3C TDM Reservation Protocol."
 msgstr "Configurez la manière dont ce site signale la réservation de ses droits de fouille de textes et données aux robots IA, conformément au W3C TDM Reservation Protocol."
 
-#: src/Settings.php:108
 msgid "Serve the endpoint, header and meta tag"
 msgstr "Servir le endpoint, l'en-tête HTTP et la balise meta"
 
-#: src/Settings.php:115
 msgid "1 — Rights reserved (opt-out)"
 msgstr "1 — Droits réservés (opt-out)"
 
-#: src/Settings.php:116
 msgid "0 — Rights not reserved (opt-in)"
 msgstr "0 — Droits non réservés (opt-in)"
 
-#: src/Settings.php:138
 msgid "Optional URL of a human-readable policy document describing your reservation terms."
 msgstr "URL optionnelle d'un document de politique lisible décrivant vos conditions de réservation."
 
-#: src/Settings.php:162
 msgid "Endpoint"
 msgstr "Endpoint"
 
-#: src/Settings.php:164
 msgid "Your TDMRep endpoint is served at:"
 msgstr "Votre endpoint TDMRep est servi à l'adresse :"
 
-#: src/Settings.php:169
 msgid "Open the URL above in a new tab to verify that it returns valid JSON. The Site Health screen also runs an automated check."
 msgstr "Ouvrez l'URL ci-dessus dans un nouvel onglet pour vérifier qu'elle renvoie un JSON valide. L'écran État de santé du site lance aussi une vérification automatique."
 
-#: src/Settings.php:183
 msgid "Settings"
 msgstr "Réglages"
 
-#: src/SiteHealth.php:30
-#: src/SiteHealth.php:62
 msgid "TDMRep endpoint reachability"
 msgstr "Accessibilité du endpoint TDMRep"
 
-#: src/SiteHealth.php:74
 msgid "The plugin is installed but currently disabled. No TDMRep signal is being sent."
 msgstr "Le plugin est installé mais actuellement désactivé. Aucun signal TDMRep n'est envoyé."
 
 #. translators: %s: error message.
-#: src/SiteHealth.php:90
 #, php-format
 msgid "The TDMRep endpoint could not be reached: %s"
 msgstr "Le endpoint TDMRep n'a pas pu être contacté : %s"
 
 #. translators: %d: HTTP status code.
-#: src/SiteHealth.php:104
 #, php-format
 msgid "The TDMRep endpoint returned an unexpected response (HTTP %d)."
 msgstr "Le endpoint TDMRep a renvoyé une réponse inattendue (HTTP %d)."
 
-#: src/SiteHealth.php:110
 msgid "The TDMRep endpoint responds with valid JSON. Your AI reservation signal is live."
 msgstr "Le endpoint TDMRep répond avec un JSON valide. Votre signal de réservation IA est actif."

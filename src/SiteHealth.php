@@ -27,7 +27,7 @@ final class SiteHealth {
 	 */
 	public function register_test( array $tests ): array {
 		$tests['async'][ self::TEST_ID ] = [
-			'label'     => __( 'TDMRep endpoint reachability', 'ai-content-reservation' ),
+			'label'     => __( 'TDMRep endpoint reachability', 'eloqio-ai-content-reservation' ),
 			'test'      => rest_url( self::REST_NS . self::REST_PATH ),
 			'has_rest'  => true,
 			'async'     => true,
@@ -59,9 +59,9 @@ final class SiteHealth {
 
 		$base = [
 			'test'        => self::TEST_ID,
-			'label'       => __( 'TDMRep endpoint reachability', 'ai-content-reservation' ),
+			'label'       => __( 'TDMRep endpoint reachability', 'eloqio-ai-content-reservation' ),
 			'badge'       => [
-				'label' => __( 'AI Content Reservation', 'ai-content-reservation' ),
+				'label' => __( 'AI Content Reservation', 'eloqio-ai-content-reservation' ),
 				'color' => 'blue',
 			],
 			'description' => '',
@@ -71,7 +71,7 @@ final class SiteHealth {
 
 		if ( ! $this->plugin->is_enabled() ) {
 			$base['status']      = 'recommended';
-			$base['description'] = '<p>' . esc_html__( 'The plugin is installed but currently disabled. No TDMRep signal is being sent.', 'ai-content-reservation' ) . '</p>';
+			$base['description'] = '<p>' . esc_html__( 'The plugin is installed but currently disabled. No TDMRep signal is being sent.', 'eloqio-ai-content-reservation' ) . '</p>';
 			return $base;
 		}
 
@@ -87,7 +87,7 @@ final class SiteHealth {
 			$base['status']      = 'critical';
 			$base['description'] = '<p>' . sprintf(
 				/* translators: %s: error message. */
-				esc_html__( 'The TDMRep endpoint could not be reached: %s', 'ai-content-reservation' ),
+				esc_html__( 'The TDMRep endpoint could not be reached: %s', 'eloqio-ai-content-reservation' ),
 				esc_html( $response->get_error_message() )
 			) . '</p>';
 			return $base;
@@ -101,13 +101,13 @@ final class SiteHealth {
 			$base['status']      = 'critical';
 			$base['description'] = '<p>' . sprintf(
 				/* translators: %d: HTTP status code. */
-				esc_html__( 'The TDMRep endpoint returned an unexpected response (HTTP %d).', 'ai-content-reservation' ),
+				esc_html__( 'The TDMRep endpoint returned an unexpected response (HTTP %d).', 'eloqio-ai-content-reservation' ),
 				$code
 			) . '</p>';
 			return $base;
 		}
 
-		$base['description'] = '<p>' . esc_html__( 'The TDMRep endpoint responds with valid JSON. Your AI reservation signal is live.', 'ai-content-reservation' ) . '</p>';
+		$base['description'] = '<p>' . esc_html__( 'The TDMRep endpoint responds with valid JSON. Your AI reservation signal is live.', 'eloqio-ai-content-reservation' ) . '</p>';
 
 		return $base;
 	}
